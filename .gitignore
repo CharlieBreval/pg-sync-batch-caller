@@ -1,0 +1,7 @@
+config/local.json
+node_modules/**
+queries/*
+node_modules
+.gitkeep
+.DS_Store
+results/*

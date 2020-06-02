@@ -1,0 +1,6 @@
+{
+  "queries": [
+    "SELECT * from hamburger where deleted_at IS NULL AND restaurant_uuid = '1f188751-d64a-46c7-baac-21d585ab914s'",
+    "SELECT * from hamburger where deleted_at IS NULL AND restaurant_uuid = 'fc974ea9-6ca4-4d7e-b038-8fab16f0e36s'"
+  ]
+}

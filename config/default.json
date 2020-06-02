@@ -1,0 +1,10 @@
+{
+  "delay": 20,
+  "database": {
+    "user": "username",
+    "host": "host",
+    "database": "database-name",
+    "password": "dqsdsqdq98",
+    "port": 5433
+  }
+}
