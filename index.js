@@ -20,12 +20,15 @@ async function handle(dirName, client) {
 
         // Modify to suit your needs
         let lines = res.rows.map((line) => {
-          return line + "\n";
+          // Example >>>>
+          // We write this in the result file
+          return "discount percentage : " + line["discount_percentage"];
         });
 
         // Write results
         lines.forEach((line) => {
-          fs.appendFileSync("results/" + fileName + ".txt", line);
+          console.log(">>> " + line);
+          fs.appendFileSync("results/" + fileName + ".txt", line + "\n");
         });
 
         await delay();
