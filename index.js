@@ -19,15 +19,13 @@ async function handle(dirName, client) {
         let res = await call(query, client);
 
         // Modify to suit your needs
-        let queries = res.rows.map((row) => {
-          console.log(row);
-          let ps = "[" + row.lower_ps + ", 20]";
-          return `UPDATE offer SET party_size = '${ps}' WHERE id = '${row.id}';\n`;
+        let lines = res.rows.map((line) => {
+          return line + "\n";
         });
 
         // Write results
-        queries.forEach((query) => {
-          fs.appendFileSync("results/" + fileName + ".txt", query);
+        lines.forEach((line) => {
+          fs.appendFileSync("results/" + fileName + ".txt", line);
         });
 
         await delay();
